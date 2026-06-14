@@ -3,7 +3,7 @@ title: "La primera visita al dentista: Una aventura feliz"
 description: "Descubre por qué Dentalísimo KIDS es el lugar favorito de los niños en Tehuantepec. La Dra. Mayela Leyto te cuenta cómo hacemos que ir al dentista sea un juego."
 pubDate: 2026-05-05
 heroImage: "/assets/images/blog/dentalisimo-kids.webp"
-category: "Odontopediatría"
+category: "Odontología Infantil"
 ---
 
 ¡Hola, papás y mamás! Soy la **Dra. Mayela Leyto**. Como madre y odontopediatra, sé perfectamente que la primera visita al dentista genera nervios, tanto en los niños como en ustedes. Es totalmente normal preguntarse: "¿Se portará bien?", "¿Le dolerá?".

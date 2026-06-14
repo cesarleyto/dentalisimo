@@ -3,7 +3,7 @@ title: "Cirugía Estética Facial: Define tu perfil"
 description: "Realza tus rasgos con procedimientos estéticos faciales seguros como bichectomía y lipopapada. Armonía total para tu rostro."
 pubDate: 2026-06-13
 heroImage: "/assets/images/blog/cirugia-estetica-facial.webp"
-category: "Estética Facial"
+category: "Cirugía Estética Facial"
 ---
 
 Muchas veces, cuando pensamos en "ir al dentista", solo pensamos en los dientes. Pero en **Dentalísimo**, entendemos que la sonrisa es parte de un conjunto: tu rostro. 💆🏻‍♀️✨

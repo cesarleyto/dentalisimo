@@ -3,7 +3,7 @@ title: "Limpieza y Blanqueamiento: El brillo natural de tu sonrisa"
 description: "Mantén tu boca sana y luce unos dientes radiantes. Consejos para prevenir manchas y mantener tu limpieza dental al día."
 pubDate: 2026-05-30
 heroImage: "/assets/images/blog/limpieza-y-blanqueamiento.webp"
-category: "Estética Dental"
+category: "Limpieza y Blanqueamiento"
 ---
 
 A veces, lo más sencillo es lo más efectivo. Muchas personas creen que el blanqueamiento es el único camino para una sonrisa bonita, pero la realidad es que una **limpieza dental profesional** es la base de todo. 🫧✨
