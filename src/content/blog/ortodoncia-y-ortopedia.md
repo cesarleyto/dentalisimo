@@ -3,7 +3,7 @@ title: "Ortodoncia y Ortopedia: Alineando sueños"
 description: "Corregir la posición de los dientes no es solo estética, es salud funcional. Conoce cómo la ortodoncia transforma sonrisas en Dentalísimo."
 pubDate: 2026-05-12
 heroImage: "/assets/images/blog/ortodoncia-y-ortopedia.webp"
-category: "Ortodoncia"
+category: "Ortodoncia y Ortopedia"
 ---
 
 Corregir la posición de los dientes es uno de los pasos más gratificantes que un paciente puede dar. En **Dentalísimo**, más que mover dientes, buscamos mejorar tu calidad de vida. ✨
