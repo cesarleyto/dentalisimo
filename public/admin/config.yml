@@ -1,27 +1,23 @@
 backend:
   name: github
-  # ¡IMPORTANTE! Cambia esto por tu usuario y el nombre de tu repositorio exacto
   repo: cesarleyto/dentalisimo
   branch: main
 
-# Dónde se guardan las imágenes al subirlas desde el CMS
 media_folder: "public/assets/images/blog"
-# Cómo se escribe la ruta de la imagen en el Markdown
 public_folder: "/assets/images/blog"
 
-# Configuración de Sveltia (Opcional pero recomendado para que se vea en español)
 locale: es
 
 collections:
   - name: "blog"
-    label: "Blog de Dentalísimo"
+    label: "Blog"
     folder: "src/content/blog"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Título del post", name: "title", widget: "string" }
-      - { label: "Descripción corta (Para SEO y tarjeta)", name: "description", widget: "text" }
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción", name: "description", widget: "text" }
       - { label: "Categoría", name: "category", widget: "select", options: ["Odontología Infantil", "Ortodoncia y Ortopedia", "Diseño de Sonrisa", "Odontología Digital", "Limpieza y Blanqueamiento", "Cirugía e Implantología", "Endodoncia", "Cirugía Estética Facial", "Dentalísimo"] }
-      - { label: "Imagen de Portada", name: "heroImage", widget: "image", required: false }
-      - { label: "Fecha de publicación", name: "pubDate", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
-      - { label: "Contenido del Post", name: "body", widget: "markdown" }
+      - { label: "Imagen", name: "heroImage", widget: "image", required: false }
+      - { label: "Fecha", name: "pubDate", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Cuerpo", name: "body", widget: "markdown" }
