@@ -1,0 +1,206 @@
+---
+const servicios = [
+  { titulo: "Odontología Infantil", desc: "Cuidado especializado y preventivo para los más pequeños en un ambiente divertido.", icon: "🦷" },
+  { titulo: "Ortodoncia y Ortopedia", desc: "Alineadores invisibles y brackets tradicionales para una sonrisa perfecta.", icon: "✨" },
+  { titulo: "Diseño de Sonrisa", desc: "Carillas y estética dental personalizada para armonizar tu rostro.", icon: "😁" },
+  { titulo: "Odontología Digital", desc: "Escáner intraoral 3D para diagnósticos precisos sin moldes incómodos.", icon: "💻" },
+  { titulo: "Limpieza y Blanqueamiento", desc: "Eliminación de sarro y manchas para devolverle el brillo natural a tus dientes.", icon: "🫧" },
+  { titulo: "Cirugía e Implantología", desc: "Extracciones seguras y reemplazo de piezas dentales con tecnología de punta.", icon: "⚕️" },
+  { titulo: "Endodoncia", desc: "Salvamos tus dientes naturales eliminando el dolor desde la raíz.", icon: "🩺" },
+  { titulo: "Cirugía Estética Facial", desc: "Bichectomía y lipopapada para perfilar y destacar tus mejores rasgos.", icon: "💆🏻‍♀️" }
+];
+---
+<section id="Servicios" class="servicios-section">
+    <div class="servicios-container">
+        <h2 class="title-verdeazul">La sonrisa que te mereces</h2>
+        <div class="servicios-grid">
+            {servicios.map((servicio) => (
+                <div class="servicio-card">
+                    <div class="servicio-header">
+                        <div class="icon-wrapper">{servicio.icon}</div>
+                        <h3>{servicio.titulo}</h3>
+                        <div class="toggle-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="servicio-body">
+                        <div class="servicio-body-inner">
+                            <p>{servicio.desc}</p>
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Estilos Base Generales */
+    .servicios-section {
+        background-color: var(--blanco);
+        padding: 80px 20px;
+        text-align: center;
+    }
+    .servicios-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .title-verdeazul {
+        color: var(--verdeazul);
+        font-size: 2.8rem;
+        font-weight: 900;
+        margin-bottom: 50px;
+    }
+    .servicios-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+    .servicio-card {
+        background: #f9f9f9;
+        border-radius: 20px;
+        border-bottom: 4px solid var(--verdeazul-2);
+        overflow: hidden; /* Importante para el acordeón */
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* ESCRITORIO Y TABLETS (Como lo tenías, hermoso y en Grid) */
+    @media (min-width: 769px) {
+        .servicio-card {
+            padding: 30px 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .servicio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(15, 168, 189, 0.15);
+        }
+        .toggle-icon {
+            display: none; /* Ocultamos la flecha en Desktop */
+        }
+        .icon-wrapper {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .servicio-header h3 {
+            color: var(--verdeazul);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .servicio-body-inner p {
+            color: var(--negro);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+    }
+
+    /* Ajuste de columnas en Tablets */
+    @media (max-width: 1024px) and (min-width: 769px) {
+        .servicios-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* CELULARES (Vista de Lista Colapsable / Acordeón) */
+    @media (max-width: 768px) {
+        .title-verdeazul { 
+            font-size: 2rem; 
+        }
+        .servicios-grid { 
+            grid-template-columns: 1fr; 
+            gap: 15px; 
+        }
+        .servicio-card {
+            padding: 0;
+            text-align: left;
+        }
+        /* Cabecera clicable */
+        .servicio-header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.3s;
+        }
+        .servicio-header:active {
+            background-color: #f0f0f0;
+        }
+        .icon-wrapper {
+            font-size: 1.8rem;
+            margin-bottom: 0;
+            margin-right: 15px;
+        }
+        .servicio-header h3 {
+            color: var(--verdeazul);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 0;
+            flex: 1; /* Empuja la flecha a la derecha */
+        }
+        .toggle-icon {
+            color: var(--verdeazul);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+        
+        /* Magia del Acordeón con Grid-Rows */
+        .servicio-body {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.3s ease;
+        }
+        .servicio-body-inner {
+            overflow: hidden;
+        }
+        .servicio-body-inner p {
+            margin: 0;
+            padding: 0 20px 20px 65px; /* Acomoda el texto debajo del título respetando el espacio del icono */
+            color: var(--negro);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        /* CLASES ACTIVAS (Cuando se abre el acordeón) */
+        .servicio-card.active .servicio-body {
+            grid-template-rows: 1fr;
+        }
+        .servicio-card.active .servicio-body-inner p {
+            opacity: 1;
+        }
+        .servicio-card.active .toggle-icon {
+            transform: rotate(180deg); /* Voltea la flecha */
+            color: var(--verdeazul-2);
+        }
+    }
+</style>
+
+<script>
+    // Pequeño script para manejar los clics de apertura y cierre en móviles
+    const headers = document.querySelectorAll('.servicio-header');
+
+    headers.forEach(header => {
+        header.addEventListener('click', () => {
+            // Solo se activa la lógica si estamos en vista de celular/tablet pequeño
+            if (window.innerWidth <= 768) {
+                const currentCard = header.closest('.servicio-card');
+                
+                // OPCIONAL: Descomenta las siguientes 3 líneas si quieres que 
+                // al abrir uno, los demás se cierren automáticamente.
+                /*
+                document.querySelectorAll('.servicio-card').forEach(card => {
+                    if (card !== currentCard) card.classList.remove('active');
+                });
+                */
+
+                // Alterna entre abrir y cerrar
+                currentCard.classList.toggle('active');
+            }
+        });
+    });
+</script>

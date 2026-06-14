@@ -1,0 +1,88 @@
+---
+---
+<section class="kids-section">
+    <div class="sr-only">
+        <h2>Dentalísimo KIDS</h2>
+        <p>Creamos un espacio mágico, divertido y sin temores donde cada consulta se convierte en un juego inolvidable para los más pequeños. Dra. Mayela Leyto - Mi Primer Dentista.</p>
+    </div>
+
+    <a href="/blog/dentalisimo-kids" class="mascot-link" aria-label="Descubre más sobre Dentalísimo KIDS">
+        <img 
+            src="/assets/mayelita.svg" 
+            alt="Dentalísimo KIDS: Espacio mágico y divertido para los más pequeños. Dra. Mayela Leyto - Mi Primer Dentista." 
+            class="floating-svg"
+        >
+    </a>
+</section>
+
+<style>
+    /* Oculta texto visualmente pero lo mantiene para Google (SEO) */
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+
+    .kids-section {
+        background: linear-gradient(to bottom, var(--verdeazul), var(--verdeazul-2));
+        height: 440px; /* Reducido ~20% (antes 550px) para un formato más horizontal */
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end; /* Clava el contenido al borde inferior */
+    }
+
+    .mascot-link {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .floating-svg {
+        width: 90%; 
+        max-width: 660px; /* Aumentado ~20% (antes 550px) para que sea enorme */
+        height: auto;
+        position: relative;
+        bottom: -70px; /* Hundido un poco más porque la imagen ahora es más grande */
+        animation: float 4s ease-in-out infinite;
+        transform-origin: bottom center;
+        filter: drop-shadow(0px 15px 25px rgba(0,0,0,0.15));
+        transition: filter 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Brillo mágico al pasar el mouse por encima para indicar que es clickeable */
+    .mascot-link:hover .floating-svg {
+        filter: drop-shadow(0px 10px 40px rgba(255, 255, 255, 0.4));
+    }
+
+    /* Animación flotante cuidando no revelar el fondo */
+    @keyframes float {
+        0% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-15px) rotate(2deg); }
+        100% { transform: translateY(0px) rotate(0deg); }
+    }
+
+    /* Ajustes radicales para Celulares */
+    @media (max-width: 768px) {
+        .kids-section {
+            height: 290px; /* Reducido ~40% (antes 480px) */
+        }
+        
+        .floating-svg {
+            width: 90%; /* Ancho estricto al 90% */
+            max-width: 450px; /* Límite de seguridad por si las pantallas varían mucho */
+            bottom: -35px; /* Ajuste milimétrico para ocultar el corte al 90% de ancho */
+        }
+    }
+</style>

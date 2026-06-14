@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Kids from '../components/Kids.astro';
+import Servicios from '../components/Servicios.astro';
+import Galeria from '../components/Galeria.astro';
+import Ubicacion from '../components/Ubicacion.astro';
+import LastPosts from '../components/LastPosts.astro';
+import Cta from '../components/Cta.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Dentalísimo | Clínica Dental en Tehuantepec, Oaxaca";
+const description = "Descubre la nueva era de la salud bucal en Tehuantepec, Oaxaca. En Dentalísimo combinamos Odontología Digital de vanguardia (escáner 3D) con un trato cálido y humano. Ofrecemos ortodoncia, estética dental y atención especializada para niños en Dentalísimo KIDS con la Dra. Mayela Leyto. ¡Agenda tu cita!";
+---
+
+<Layout title={title} description={description} image="/og-image.jpg">
+	<Header />
+	<main>
+		<Hero />
+		<Servicios />
+		<Kids />
+		<LastPosts />
+		<Ubicacion />
+		<Galeria />
+	</main>
+	<Footer />
+</Layout>

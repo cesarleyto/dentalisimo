@@ -1,0 +1,113 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+
+interface Props {
+	title: string;
+	description: string;
+	image?: string;
+}
+
+const { title, description, image = '/og-image.jpg' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead title={title} description={description} image={image} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--verdeazul: #0FA8BD;
+		--verdeazul-2: #0FD1DB;
+		--blanco: #ffffff;
+		--negro: #000000;
+		--gradiente: linear-gradient(135deg, var(--verdeazul), var(--verdeazul-2));
+	}
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+	html {
+		font-family: 'Montserrat', sans-serif;
+		scroll-behavior: smooth;
+	}
+	body {
+		background-color: var(--blanco);
+		color: var(--negro);
+		overflow-x: hidden;
+	}
+	
+	/* CLASES DE BOTONES REUTILIZABLES */
+	.btn-cta {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		background: var(--gradiente);
+		color: var(--blanco);
+		font-weight: 900;
+		padding: 12px 28px;
+		border-radius: 50px;
+		text-decoration: none;
+		box-shadow: 0 0 15px rgba(255,255,255,0.75);
+		transition: all 0.3s ease;
+		border: none;
+		cursor: pointer;
+	}
+	.btn-cta:hover {
+		box-shadow: 0 0 25px rgba(255,255,255,1);
+		transform: translateY(-5px) scale(1.05);
+	}
+
+	.btn-blanco {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		background: transparent;
+		color: var(--blanco);
+		font-weight: 600;
+		padding: 10px 24px;
+		border-radius: 50px;
+		text-decoration: none;
+		border: 2px solid var(--blanco);
+		transition: all 0.3s ease;
+	}
+	.btn-blanco:hover {
+		transform: translateY(-5px) scale(1.05);
+		background: rgba(255,255,255,0.1);
+	}
+
+	.btn-color {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		background: transparent;
+		color: var(--verdeazul);
+		font-weight: 600;
+		padding: 10px 24px;
+		border-radius: 50px;
+		text-decoration: none;
+		border: 2px solid var(--verdeazul);
+		transition: all 0.3s ease;
+	}
+	.btn-color:hover {
+		transform: translateY(-5px) scale(1.05);
+		background: rgba(15, 168, 189, 0.1);
+	}
+
+	/* EFECTO IMAGENES GLOBAL */
+	img.hover-zoom {
+		transition: transform 0.4s ease;
+	}
+	img.hover-zoom:hover {
+		transform: scale(1.05);
+	}
+</style>

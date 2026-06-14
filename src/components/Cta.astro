@@ -1,0 +1,62 @@
+---
+---
+<section class="cta-section">
+	<div class="cta-image">
+		<img src="/assets/images/cta.webp" alt="Paciente feliz en Dentalísimo" class="hover-zoom">
+	</div>
+	<div class="cta-content">
+		<div class="content-inner">
+			<h2>Tu salud dental no puede esperar más</h2>
+			<p>Cuidar tu sonrisa es cuidar de tu bienestar integral. Prevenir a tiempo evita dolores y tratamientos costosos en el futuro. Permítenos consentirte con nuestra tecnología sin dolor y especialistas altamente capacitados.</p>
+			<a href="/#Ubicacion" class="btn-blanco">¡Visita Dentalísimo!</a>
+		</div>
+	</div>
+</section>
+
+<style>
+	.cta-section {
+		display: flex;
+		height: 60vh;
+		min-height: 450px;
+	}
+	.cta-image {
+		width: 50%;
+		overflow: hidden;
+		position: relative;
+	}
+	.cta-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+	}
+	.cta-content {
+		width: 50%;
+		background-color: var(--verdeazul);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 5%;
+		color: var(--blanco);
+	}
+	.content-inner {
+		max-width: 450px;
+	}
+	.content-inner h2 {
+		font-size: 2.5rem;
+		font-weight: 900;
+		margin-bottom: 15px;
+		line-height: 1.2;
+	}
+	.content-inner p {
+		font-size: 1.1rem;
+		margin-bottom: 25px;
+		line-height: 1.6;
+	}
+
+	@media (max-width: 768px) {
+		.cta-section { flex-direction: column-reverse; height: auto; }
+		.cta-image { width: 100%; height: 350px; }
+		.cta-content { width: 100%; padding: 40px 20px; text-align: center; }
+	}
+</style>

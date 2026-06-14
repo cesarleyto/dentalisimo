@@ -1,0 +1,78 @@
+---
+---
+<section class="hero-section">
+	<div class="hero-image">
+		<img src="/assets/images/portada.webp" alt="Clínica Dental Dentalísimo en Tehuantepec" class="hover-zoom">
+	</div>
+	<div class="hero-content">
+		<div class="content-inner">
+			<h1>Odontología Digital de vanguardia en <span class="highlight">Tehuantepec</span></h1>
+			<p>Servicio de primera y grandes especialistas cuidando tu sonrisa. Somos la mejor clínica de la región del Istmo con tecnología 3D, ortodoncia invisible y trato humano.</p>
+			<a href="#Ubicacion" class="btn-blanco">¡Visita Dentalísimo!</a>
+		</div>
+	</div>
+</section>
+
+<style>
+	.hero-section {
+		display: flex;
+		min-height: 100vh;
+		width: 100%;
+	}
+	.hero-image {
+		width: 50%;
+		overflow: hidden;
+		position: relative;
+	}
+	.hero-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+	}
+	.hero-content {
+		width: 50%;
+		background-color: var(--verdeazul);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 5%;
+	}
+	.content-inner {
+		max-width: 500px;
+		color: var(--blanco);
+	}
+	.content-inner h1 {
+		font-size: 3.5rem;
+		font-weight: 900;
+		line-height: 1.1;
+		margin-bottom: 20px;
+	}
+	.highlight {
+		color: var(--verdeazul-2);
+		text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+	}
+	.content-inner p {
+		font-size: 1.1rem;
+		margin-bottom: 30px;
+		line-height: 1.6;
+	}
+
+	@media (max-width: 768px) {
+		.hero-section {
+			flex-direction: column;
+		}
+		.hero-image {
+			width: 100%;
+			height: 50vh;
+		}
+		.hero-content {
+			width: 100%;
+			min-height: 50vh;
+			text-align: center;
+		}
+		.content-inner h1 {
+			font-size: 2.5rem;
+		}
+	}
+</style>
