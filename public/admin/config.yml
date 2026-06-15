@@ -10,14 +10,14 @@ locale: es
 
 collections:
   - name: "blog"
-    label: "Blog"
+    label: "Blog de Dentalísimo"
     folder: "src/content/blog"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descripción", name: "description", widget: "text" }
+      - { label: "Título del post", name: "title", widget: "string" }
+      - { label: "Descripción corta", name: "description", widget: "text" }
       - { label: "Categoría", name: "category", widget: "select", options: ["Odontología Infantil", "Ortodoncia y Ortopedia", "Diseño de Sonrisa", "Odontología Digital", "Limpieza y Blanqueamiento", "Cirugía e Implantología", "Endodoncia", "Cirugía Estética Facial", "Dentalísimo"] }
-      - { label: "Imagen", name: "heroImage", widget: "image", required: false }
-      - { label: "Fecha", name: "pubDate", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
-      - { label: "Cuerpo", name: "body", widget: "markdown" }
+      - { label: "Imagen de Portada", name: "heroImage", widget: "image", required: false }
+      - { label: "Fecha de publicación", name: "pubDate", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Contenido del Post", name: "body", widget: "markdown" }
