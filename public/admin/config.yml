@@ -11,6 +11,7 @@ locale: es
 collections:
   - name: "blog"
     label: "Blog de Dentalísimo"
+    logo_url: "/assets/logo/dentalisimo.svg"
     folder: "src/content/blog"
     create: true
     slug: "{{slug}}"
