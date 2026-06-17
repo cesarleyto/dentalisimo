@@ -32,6 +32,7 @@ const { title, description, image = '/og-image.jpg' } = Astro.props;
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.site || Astro.url)} />
+<meta property="og:site_name" content="Dentalísimo | Clínica Dental en Tehuantepec, Oaxaca" />
 
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
